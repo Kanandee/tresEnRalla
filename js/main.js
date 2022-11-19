@@ -1,3 +1,4 @@
+//Variables
 let formularioNombre = document.getElementById('formularioNombre');
 let cuerpoFomulario = document.getElementById('cuerpoFormulario')
 let tablero = document.getElementById('tablero')
@@ -6,7 +7,18 @@ let nombre = document.getElementById('nombre');
 let nombreJugador = document.getElementById('nombreJugador')
 let nombre2 = document.getElementById('nombre2');
 let nombreJugador2 = document.getElementById('nombreJugador2')
+let recarga = document.getElementById('recarga')
+let listaCasilla = document.querySelectorAll('.casilla')
+let ganador = document.getElementById('ganador')
 
+let turno = true
+let partidaAcabada = false
+
+const arrayVictoria = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [6, 3, 0], [7, 4, 1], [8, 5, 2], [0, 4, 8], [6, 4, 2]]
+
+
+
+//Programa
 formularioNombre.addEventListener('submit', (ev) => {
     ev.preventDefault();
     nombreJugador.innerHTML = nombre.value
@@ -20,19 +32,10 @@ formularioNombre.addEventListener('submit', (ev) => {
     
 
 })
+recarga.addEventListener('click',()=>{
+    location.reload()
+})
 
-
-//Array
-const arrayVictoria = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [6, 3, 0], [7, 4, 1], [8, 5, 2], [0, 4, 8], [6, 4, 2]]
-
-const listaCasilla = document.querySelectorAll('.casilla')
-
-
-//Variables
-let turno = true
-let partidaAcabada = false
-
-//Programa
 listaCasilla.forEach(function (casilla, index) {
 
     
@@ -46,6 +49,8 @@ listaCasilla.forEach(function (casilla, index) {
                     const element = arrayVictoria[i];
                     if (listaCasilla[element[0]].innerHTML === '🐱' && listaCasilla[element[1]].innerHTML === '🐱' && listaCasilla[element[2]].innerHTML === '🐱') {
                         partidaAcabada = true
+                        ganador.innerHTML = 'Ha ganado: ' + nombreJugador.innerHTML
+                        
                 
                        
                        
@@ -60,6 +65,7 @@ listaCasilla.forEach(function (casilla, index) {
                     const element = arrayVictoria[i];
                     if (listaCasilla[element[0]].innerHTML === '🦊' && listaCasilla[element[1]].innerHTML === '🦊' && listaCasilla[element[2]].innerHTML === '🦊') {
                       partidaAcabada = true
+                      ganador.innerHTML = 'Ha ganado: ' + nombreJugador2.innerHTML
                    
                     }
                 }

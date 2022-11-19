@@ -21,12 +21,18 @@ body {
 
 }
 
-
-#container {
-    display:none;
+#container{
+    height: 100vh;
+    display: none;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+}
+
+#containerTablero {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #tablero {

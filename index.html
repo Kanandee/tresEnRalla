@@ -12,8 +12,8 @@
 <body>
     <div id="cuerpoFormulario">
         <form id="formularioNombre">
-            <input id='nombre' type="text">
-            <input id="nombre2" type="text">
+            <input id='nombre' type="text" placeholder="Nombre jugador 1...">
+            <input id="nombre2" type="text" placeholder="Nombre jugador 2...">
             <button type="submit">
                 ¡Comencemos a jugar!
             </button>
@@ -23,27 +23,29 @@
 
 
     <div id="container">
-        <div>
-            <h2 id="nombreJugador"></h2>
-            <h2>🦊</h2>
+        <h2 id="ganador"></h2>
+        <div id="containerTablero">
+            <div>
+                <h2 id="nombreJugador"></h2>
+                <h2>🐱</h2>
+            </div>
+            <div id="tablero">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div>
+                <h2 id="nombreJugador2"></h2>
+                <h2>🦊</h2>
+            </div>
         </div>
-        <div id="tablero">
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-        </div>
-        <div>
-            <h2 id="nombreJugador2"></h2>
-            <h2>🐱</h2>
-        </div>
+        <button id="recarga">Volver a jugar</button>
     </div>
     <script src="js/main.js"></script>
 </body>
