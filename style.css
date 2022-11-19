@@ -1,0 +1,45 @@
+#formularioNombre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    background-image: url(Img/15782192_5679989.jpg);
+}
+
+.cuerpoFormulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 400px;
+    width: 400px;
+}
+
+.casilla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1.9px rgb(102, 42, 47);
+    font-size: 2em;
+}
