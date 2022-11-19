@@ -1,12 +1,25 @@
-// let formularioNombre = document.getElementById('formularioNombre');
-// let nombre = document.getElementById('nombre');
-// let nombreJugador = document.getElementById('nombreJugador')
+let formularioNombre = document.getElementById('formularioNombre');
+let cuerpoFomulario = document.getElementById('cuerpoFormulario')
+let tablero = document.getElementById('tablero')
+let container = document.getElementById('container')
+let nombre = document.getElementById('nombre');
+let nombreJugador = document.getElementById('nombreJugador')
+let nombre2 = document.getElementById('nombre2');
+let nombreJugador2 = document.getElementById('nombreJugador2')
 
-// formularioNombre.addEventListener('submit', (ev) => {
-//     ev.preventDefault();
-//     nombreJugador.innerHTML = nombre.value
-//     nombre.value = ''
-// })
+formularioNombre.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    nombreJugador.innerHTML = nombre.value
+    nombreJugador2.innerHTML = nombre2.value
+    // nombre = nombre.value
+    // nombre2 = nombre2.value
+    nombre.value = ''
+    nombre2.value = ''
+    cuerpoFomulario.style.display = 'none'
+    container.style.display = 'flex'
+    
+
+})
 
 
 //Array

@@ -13,7 +13,7 @@ body {
     background-image: url(Img/15782192_5679989.jpg);
 }
 
-.cuerpoFormulario {
+#cuerpoFormulario {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +21,15 @@ body {
 
 }
 
-.container {
-    display: flex;
+
+#container {
+    display:none;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.tablero {
+#tablero {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

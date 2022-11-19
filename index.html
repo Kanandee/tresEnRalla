@@ -10,19 +10,40 @@
 </head>
 
 <body>
-    <div class="cuerpoFormulario">
+    <div id="cuerpoFormulario">
         <form id="formularioNombre">
             <input id='nombre' type="text">
+            <input id="nombre2" type="text">
             <button type="submit">
                 ¡Comencemos a jugar!
             </button>
         </form>
 
-        <button>
-            <a href="tablero.html">Ir al tablero</a>
-        </button>
-        <h2 id="nombreJugador"></h2>
+    </div>
 
+
+    <div id="container">
+        <div>
+            <h2 id="nombreJugador"></h2>
+            <h2>🦊</h2>
+        </div>
+        <div id="tablero">
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+        </div>
+        <div>
+            <h2 id="nombreJugador2"></h2>
+            <h2>🐱</h2>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>
