@@ -7,9 +7,10 @@ let nombre = document.getElementById('nombre');
 let nombreJugador = document.getElementById('nombreJugador')
 let nombre2 = document.getElementById('nombre2');
 let nombreJugador2 = document.getElementById('nombreJugador2')
-let recarga = document.getElementById('recarga')
+let recarga = document.querySelectorAll('.recarga')
 let listaCasilla = document.querySelectorAll('.casilla')
 let ganador = document.getElementById('ganador')
+let pestañaGanador = document.getElementById('pestañaGanador')
 
 let turno = true
 let partidaAcabada = false
@@ -32,11 +33,13 @@ formularioNombre.addEventListener('submit', (ev) => {
     
 
 })
-recarga.addEventListener('click',()=>{
-    location.reload()
+recarga.forEach(function(boton){
+    boton.addEventListener('click',()=>{
+        location.reload()
+    })
 })
 
-listaCasilla.forEach(function (casilla, index) {
+listaCasilla.forEach(function (casilla) {
 
     
     casilla.addEventListener('click', function () {
@@ -50,7 +53,8 @@ listaCasilla.forEach(function (casilla, index) {
                     if (listaCasilla[element[0]].innerHTML === '🐱' && listaCasilla[element[1]].innerHTML === '🐱' && listaCasilla[element[2]].innerHTML === '🐱') {
                         partidaAcabada = true
                         ganador.innerHTML = 'Ha ganado: ' + nombreJugador.innerHTML
-                        
+                        container.style.display = 'none'
+                        pestañaGanador.style.display = 'flex'
                 
                        
                        
@@ -66,6 +70,8 @@ listaCasilla.forEach(function (casilla, index) {
                     if (listaCasilla[element[0]].innerHTML === '🦊' && listaCasilla[element[1]].innerHTML === '🦊' && listaCasilla[element[2]].innerHTML === '🦊') {
                       partidaAcabada = true
                       ganador.innerHTML = 'Ha ganado: ' + nombreJugador2.innerHTML
+                      container.style.display = 'none'
+                        pestañaGanador.style.display = 'flex'
                    
                     }
                 }
@@ -76,3 +82,5 @@ listaCasilla.forEach(function (casilla, index) {
     })
 
 })
+
+

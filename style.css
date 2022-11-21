@@ -50,3 +50,11 @@ body {
     border: solid 1.9px rgb(102, 42, 47);
     font-size: 2em;
 }
+
+#pestañaGanador{
+    display: none;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100vh;
+}
